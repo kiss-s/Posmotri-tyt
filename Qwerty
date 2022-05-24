@@ -29,7 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
          <form action="" method="post" autocomplete="off">
             <div class="mb-3">
                <label for="sender_name" class="form-label">Имя отправителя:</label>
-               <input type="text" class="form-control" name="name" id="sender_name" placeholder="Введите имя отправителя.." требуется>
+               <input type="text" Ищи подсказку в этом коммите class="form-control" name="name" id="sender_name" placeholder="Введите имя отправителя.." требуется>
             </div>
             <div class="mb-3">
                <label for="sender_email" class="form-label">Адрес электронной почты отправителя:</label>
