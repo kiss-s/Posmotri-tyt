@@ -1,0 +1,54 @@
+<?php
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $email = $_POST['email'];
+    $content = $_POST['контент'];
+    $name = $_POST['имя'];
+    $sender = $_POST['отправитель'];
+    $subject = $_POST['subject'];
+ 
+    $headers = "From: $name"."<".$sender.">\r\n";
+    почта($email, $subject, $content, $headers );
+}
+
+?>
+
+<html lang="ru">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="таблица стилей" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="анонимный">
+      <title>Emailer</title>
+   </head>
+   <body style="user-select: none">
+      <nav class="navbar navbar-dark bg-dark">
+         <div class="контейнер-жидкость">
+            <a class="navbar-brand">Электронная почта</a>
+         </div>
+      </nav>
+      <div class="container">
+         <form action="" method="post" autocomplete="off">
+            <div class="mb-3">
+               <label for="sender_name" class="form-label">Имя отправителя:</label>
+               <input type="text"Далеко далеко в горах... class="form-control" name="name" id="sender_name" placeholder="Введите имя отправителя.." требуется>
+            </div>
+            <div class="mb-3">
+               <label for="sender_email" class="form-label">Адрес электронной почты отправителя:</label>
+               <input type="email" class="form-control" name="sender" id="sender_email" placeholder="Введите адрес электронной почты отправителя.." требуется>
+            </div>
+            <div class="mb-3">
+               <label for="receiver" class="form-label">Адрес электронной почты получателя:</label>
+               <input type="email" class="form-control" name="email" id="receiver" placeholder="Введите адрес электронной почты получателя.." требуется>
+            </div>
+            <div class="mb-3">
+               <label for="subject" class="form-label">Тема письма:</label>
+               <input type="text" class="form-control" name="subject" id="subject" placeholder="Введите тему.." требуется>
+            </div>
+            <div class="mb-3">
+               <label for="content" class="form-label">Содержимое электронной почты:</label>
+               <textarea class="form-control" id="content" name="content" rows="3" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-dark">Отправить!</button>
+         </form>
+      </div>
+   </body>
+</html>
